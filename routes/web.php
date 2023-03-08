@@ -14,13 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * Authentication
+ */
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+/**
+ * Backend Theme
+ */
+Route::get('/admin-dashboard', function () {
+    return view('Backend.admin-dashboard');
+})->name('admin-dashboard');
+
+// ->middleware(['auth', 'verified'])
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
