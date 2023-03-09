@@ -30,6 +30,10 @@ Route::get('/admin-dashboard', function () {
 
 // ->middleware(['auth', 'verified'])
 
+Route::get('/resturant', function () {
+    return view('Frontend.master');
+})->name('resturant');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
