@@ -1,22 +1,22 @@
 @extends('Backend.master2')
 
 @section('title')
-    LogIn - Dashboard
+    LogIn - Dashboard Resturant
 @stop
 
 
 @section('css')
     <!-- Sidemenu-respoansive-tabs css -->
-    <link href="{{URL::asset('assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('Backend/assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css')}}" rel="stylesheet">
 @endsection
 @section('content')
-    <section class="height-100vh d-flex align-items-center page-section-ptb login" style="background-image: url(images/login-bg.jpg);" >
+    <section class="height-100vh d-flex align-items-center page-section-ptb login" style="background-image: url(asset('Backend/assets/images/login-bg.jpg'));" >
         <div class="container">
             <div class="row justify-content-center no-gutters vertical-align">
-                <div class="col-lg-4 col-md-6 login-fancy-bg bg" style="background-image: url(images/login-inner-bg.jpg);">
+                <div class="col-lg-4 col-md-6 login-fancy-bg bg" style="background-image: url(asset('Backend/assets/images/login-inner-bg.jpg'));">
                     <div class="login-fancy">
                         <h2 class="text-white mb-20">Hello world!</h2>
-                        <p class="mb-20 text-white">Dashboard</p>
+                        <p class="mb-20 text-white">Dashboard Resturant</p>
                         <ul class="list-unstyled  pos-bot pb-30">
                             <li class="list-inline-item"><a class="text-white" href="#"> Terms of Use</a> </li>
                             <li class="list-inline-item"><a class="text-white" href="#"> Privacy Policy</a></li>
