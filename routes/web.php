@@ -22,17 +22,18 @@ Route::get('/', function () {
 });
 
 /**
+ * Frontend Theme
+ */
+Route::get('/', function () {
+    return view('Frontend.master');
+})->name('resturant');
+
+/**
  * Backend Theme
  */
 Route::get('/admin-dashboard', function () {
     return view('Backend.admin-dashboard');
-})->name('admin-dashboard');
-
-// ->middleware(['auth', 'verified'])
-
-Route::get('/resturant', function () {
-    return view('Frontend.master');
-})->name('resturant');
+})->middleware(['auth', 'verified'])->name('admin-dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
