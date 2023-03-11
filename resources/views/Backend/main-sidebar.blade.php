@@ -5,27 +5,24 @@
        <!-- menu item Dashboard-->
        <li>
          <a href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard">
-           <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">Dashboard</span></div>
+           <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">Home</span></div>
            <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
          </a>
          <ul id="dashboard" class="collapse" data-parent="#sidebarnav">
-           <li> <a href="index.html">Dashboard 01</a> </li>
-           <li> <a href="index-02.html">Dashboard 02</a> </li>
-           <li> <a href="index-03.html">Dashboard 03</a> </li>
-           <li> <a href="index-04.html">Dashboard 04</a> </li>
-           <li> <a href="index-05.html">Dashboard 05</a> </li>
+           <li> <a href="{{ URL::route('admin-dashboard') }}">Reload</a> </li>
+           <li> <a href="{{ URL::route('resturant') }}">Website</a> </li>
          </ul>
        </li>
        <!-- menu title -->
-        <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
+        <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Settings </li>
        <!-- menu item Elements-->
        <li>
          <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
-           <div class="pull-left"><i class="ti-palette"></i><span class="right-nav-text">Elements</span></div>
+           <div class="pull-left"><i class="ti-palette"></i><span class="right-nav-text">Settings</span></div>
            <div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div>
          </a>
          <ul id="elements" class="collapse" data-parent="#sidebarnav">
-           <li><a href="accordions.html">Accordions</a></li>
+           <li><a href="{{ URL::route('hero.index') }}">Hero Section</a></li>
            <li><a href="alerts.html">Alerts</a></li>
            <li><a href="button.html">Button</a></li>
            <li><a href="colorpicker.html">Colorpicker</a></li>
